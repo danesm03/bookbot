@@ -14,4 +14,18 @@ def character_counts(book):
                 char_count[lowered] = 1
 
     return char_count
+
+def sort_key(items):
+     return items["num"]
+
+def sort_dict(dict):
+    items = dict.items()
+    endlist = []
+    for char,num in items:
+        endlist.append({"char": char, "num": num})
     
+    endlist.sort(reverse=True, key=sort_key)
+    return endlist
+        
+          
+          
